@@ -71,8 +71,8 @@ export default defineComponent({
                                     <li class="list-group-item" v-if="user.events">
                                         <b>Appointments</b> <a class="float-right">{{ user.events.length }}</a>
                                     </li>
-                                    <li class="list-group-item" v-if="user.userEvents">
-                                        <b>My events</b> <a class="float-right">{{ user.userEvents.length }}</a>
+                                    <li class="list-group-item" v-if="user.user_events">
+                                        <b>User's events</b> <a class="float-right">{{ user.user_events.length }}</a>
                                     </li>
                                 </ul>
                             </div>
