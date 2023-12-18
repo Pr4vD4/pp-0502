@@ -25,6 +25,10 @@ export default defineComponent({
     beforeMount() {
         this.checkIfUserAlreadyAppointed()
         this.checkIfUserEvent()
+        this.getEventInterval = setInterval(this.eventStore.getEvent, 1000 * 30, this.eventStore.id, true)
+    },
+    unmounted() {
+        clearInterval(this.getEventInterval)
     },
     methods: {
         checkIfUserAlreadyAppointed() {
@@ -102,7 +106,12 @@ export default defineComponent({
                     <tbody>
                     <tr v-for="user in eventStore.event.users">
                         <td>{{ user.id }}</td>
-                        <td>{{ `${user.surname} ${user.name}` }}</td>
+                        <td><router-link :to="{
+                            name: 'user',
+                            params: {
+                                id: user.id
+                            }
+                        }">{{ `${user.surname} ${user.name}` }}</router-link></td>
                     </tr>
                     </tbody>
                 </table>

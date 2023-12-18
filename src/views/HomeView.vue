@@ -69,11 +69,11 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Title</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title" v-model="newEventFormData.title">
+                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title" v-model="newEventFormData.title" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Text</label>
-                                                    <textarea type="password" class="form-control" id="exampleInputPassword1" placeholder="Some text" v-model="newEventFormData.text"></textarea>
+                                                    <textarea type="password" class="form-control" id="exampleInputPassword1" placeholder="Some text" v-model="newEventFormData.text" required></textarea>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Create</button>
                                             </div>
@@ -172,12 +172,12 @@ export default {
     data() {
         return {
             initialFormData: {
-                title: '',
-                text: ''
+                title: null,
+                text: null
             },
             newEventFormData: {
-                title: '',
-                text: ''
+                title: null,
+                text: null
             }
         }
     },
