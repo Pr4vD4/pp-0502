@@ -9,7 +9,7 @@ import axios from "axios";
 // }
 
 const api = axios.create({
-    baseURL: 'http://pp-05-api/api',
+    baseURL: 'http://pp-0502-api/api',
 })
 
 api.interceptors.request.use(
