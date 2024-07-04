@@ -9,7 +9,7 @@ import axios from "axios";
 // }
 
 const api = axios.create({
-    baseURL: 'http://swc-test-task-api/api',
+    baseURL: 'http://pp-05-api/api',
 })
 
 api.interceptors.request.use(
